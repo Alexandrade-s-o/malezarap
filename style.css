@@ -1,0 +1,721 @@
+:root {
+    --bg-color: #12140F;
+    --text-color: #F5F5F0;
+    --accent-green: #A5B36B;
+    --accent-amber: #D97706;
+    --muted-text: rgba(245, 245, 240, 0.6);
+    --glass-bg: rgba(18, 20, 15, 0.7);
+    --border-color: rgba(165, 179, 107, 0.2);
+
+    --font-title: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links li a {
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+}
+
+.nav-links li a:hover {
+    color: var(--accent-green);
+}
+
+/* Hero & Parallax */
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* Más alto para el efecto de movimiento */
+    background-image: url('WhatsApp Image 2026-02-09 at 8.17.16 PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    will-change: transform;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente radial para crear esquinas transparentes que se funden con el fondo oscuro */
+    background:
+        radial-gradient(circle at center, transparent 20%, var(--bg-color) 95%),
+        linear-gradient(to bottom, transparent 60%, var(--bg-color) 100%);
+    z-index: 2;
+}
+
+/* Vector Animation */
+.vector-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.vector-animation svg {
+    width: 100%;
+    height: 100%;
+}
+
+.blob {
+    animation: moveBlob 20s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    transform-origin: center;
+}
+
+.blob-1 {
+    animation-duration: 25s;
+}
+
+.blob-2 {
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    animation-duration: 22s;
+    animation-delay: -10s;
+}
+
+@keyframes moveBlob {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(100px, -50px) scale(1.1) rotate(10deg);
+    }
+
+    66% {
+        transform: translate(-50px, 80px) scale(0.9) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+}
+
+/* Floral Decorations */
+.floral-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    opacity: 0.6;
+    filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 20px rgba(217, 119, 6, 0.3));
+    pointer-events: none;
+}
+
+.flower-1 {
+    --rot: -15deg;
+    top: -10%;
+    left: -15%;
+    width: 35vw;
+    max-width: 500px;
+    transform: rotate(var(--rot));
+    animation: floatingFlower 20s infinite alternate ease-in-out;
+}
+
+.flower-2 {
+    --rot: 165deg;
+    bottom: -10%;
+    right: -20%;
+    width: 40vw;
+    max-width: 600px;
+    transform: rotate(var(--rot)) scaleX(-1);
+    animation: floatingFlower 25s infinite alternate-reverse ease-in-out;
+}
+
+.flower-3 {
+    --rot: 70deg;
+    top: 30%;
+    right: -10%;
+    width: 25vw;
+    max-width: 350px;
+    opacity: 0.3;
+    transform: rotate(var(--rot));
+    animation: floatingFlower 30s infinite alternate ease-in-out;
+}
+
+@keyframes floatingFlower {
+    0% {
+        transform: rotate(-15deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-10deg) translate(30px, 50px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 4;
+    /* Encima de la animación vectorial */
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+/* Music Section & Player */
+.music-section {
+    position: relative;
+    padding: 10rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    background: rgba(165, 179, 107, 0.03);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.album-art-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.spotify-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+}
+
+.spotify-embed-wrap {
+    width: 100%;
+}
+
+.album-art-wrap .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: var(--accent-green);
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Responsividad para Spotify */
+
+/* Streaming Platforms Section */
+.streaming-platforms {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.platforms-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--muted-text);
+    margin-bottom: 2rem;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.platform-card {
+    background: rgba(165, 179, 107, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-card span {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.platform-card:hover {
+    background: rgba(165, 179, 107, 0.1);
+    color: var(--accent-green);
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+    box-shadow: 0 10px 30px rgba(165, 179, 107, 0.15);
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(165, 179, 107, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.platform-card:hover::before {
+    left: 100%;
+}
+
+@media (max-width: 768px) {
+    .player-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .album-art-wrap {
+        display: none;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.main-logo {
+    max-width: 600px;
+    width: 80vw;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+
+.tour-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--accent-green);
+    animation: fadeInDown 1.5s ease-out;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    /* Estilo pill premium */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: var(--bg-color);
+    box-shadow: 0 4px 15px rgba(165, 179, 107, 0.3);
+}
+
+.btn-primary:hover:not(.disabled) {
+    background-color: var(--text-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(245, 245, 240, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+}
+
+.btn-outline:hover:not(.disabled) {
+    background: var(--accent-green);
+    color: var(--bg-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(165, 179, 107, 0.2);
+}
+
+.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(1);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--muted-text);
+}
+
+/* Tour Section */
+.tour-section {
+    position: relative;
+    padding: 8rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.title-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-green);
+    margin: 0 auto;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px 150px;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+}
+
+.date-row:hover {
+    background: rgba(165, 179, 107, 0.05);
+}
+
+.date-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-info .day {
+    font-size: 2rem;
+    font-family: var(--font-title);
+    color: var(--accent-green);
+}
+
+.date-info .month {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.location .city {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.location .venue {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+}
+
+.extra-info {
+    font-size: 0.75rem;
+    color: var(--accent-green);
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.date-row.highlighted {
+    background: rgba(165, 179, 107, 0.08);
+    border-left: 4px solid var(--accent-green);
+}
+
+.date-row.highlighted:hover {
+    background: rgba(165, 179, 107, 0.12);
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    border-radius: 2px;
+}
+
+.sold-out {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+}
+
+.available {
+    background: rgba(165, 179, 107, 0.1);
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+}
+
+/* Merch Teaser */
+.merch-teaser {
+    padding: 10rem 2rem;
+    background: linear-gradient(rgba(18, 20, 15, 0.8), rgba(18, 20, 15, 0.8)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.merch-teaser p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+    color: var(--muted-text);
+}
+
+.merch-status {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(165, 179, 107, 0.1);
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    font-family: var(--font-title);
+    font-size: 1.5rem !important;
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem !important;
+    border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+    padding: 5rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-logo {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--accent-green);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.social-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--muted-text);
+}
+
+.social-links a:hover {
+    color: var(--accent-green);
+}
+
+.copyright {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: rgba(245, 245, 240, 0.3);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.scroll-indicator span {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--muted-text);
+}
+
+.scroll-indicator .line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent-green), transparent);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInDown 2s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .date-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .status,
+    .action {
+        grid-column: span 1;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Hero Responsive */
+    .hero {
+        height: 100svh;
+    }
+
+    .main-logo {
+        width: 85vw;
+        max-width: 400px;
+        margin-bottom: 1.5rem;
+    }
+
+    .tour-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 2rem;
+    }
+
+    .parallax-bg {
+        height: 110%;
+    }
+
+    /* Ajuste de flores para móvil */
+    .flower-1 {
+        width: 50vw;
+        top: -5%;
+        left: -20%;
+    }
+
+    .flower-2 {
+        width: 65vw;
+        bottom: -5%;
+        right: -25%;
+    }
+
+    .flower-3 {
+        display: none;
+    }
+
+}

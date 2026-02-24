@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALEZA | Tour Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MALEZA</a>
+            <ul class="nav-links">
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#music">MÚSICA</a></li>
+                <li><a href="#merch">MERCH</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <div class="parallax-bg" id="parallax-bg"></div>
+
+        <!-- Animación Vectorial Orgánica -->
+        <div class="vector-animation">
+            <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:var(--accent-green);stop-opacity:0.2" />
+                        <stop offset="100%" style="stop-color:var(--accent-green);stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+                <circle class="blob blob-1" cx="500" cy="500" r="300" fill="url(#grad1)" />
+                <circle class="blob blob-2" cx="200" cy="200" r="250" fill="url(#grad1)" />
+                <circle class="blob blob-3" cx="800" cy="700" r="200" fill="url(#grad1)" />
+            </svg>
+        </div>
+
+        <!-- Decoraciones Florales (Naranjas) -->
+        <div class="floral-decorations">
+            <img src="MALEZA_TAGETE.png" class="flower flower-1" alt="Decoración Floral">
+            <img src="MALEZA_TAGETE.png" class="flower flower-2" alt="Decoración Floral">
+            <img src="MALEZA_TAGETE.png" class="flower flower-3" alt="Decoración Floral">
+        </div>
+
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="COVERYT1235x338_21.01.2026.png" alt="Maleza Logo" class="main-logo animate-fade-in">
+            <h2 class="tour-subtitle">MÚSICA ORGÁNICA / EXPERIENCIA SENSORIAL</h2>
+            <div class="hero-cta">
+                <a href="#music" class="btn btn-primary">ESCUCHAR AHORA</a>
+                <a href="#tour" class="btn btn-outline">FECHAS TOUR</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>EXPLORAR</span>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="music" class="music-section">
+            <div class="section-header">
+                <h2 class="section-title">DISCOGRAFÍA</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="player-container spotify-integration">
+                <div class="album-art-wrap">
+                    <img src="maleza.jpeg" alt="Maleza Music" class="spotify-cover">
+                    <div class="glow"></div>
+                </div>
+                <div class="spotify-embed-wrap">
+                    <!-- Sustituir ARTIST_ID con el ID real de Maleza en Spotify -->
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/artist/0WxnpteHpV5oeP0CjcKIvo?utm_source=generator&theme=0"
+                        width="100%" height="380" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Streaming Links -->
+            <div class="streaming-platforms">
+                <p class="platforms-label">ESCUCHAR EN TU PLATAFORMA FAVORITA</p>
+                <div class="platform-grid">
+                    <a href="https://music.apple.com/au/album/mugre-bajo-las-u%C3%B1as-single/1858175195"
+                        target="_blank" class="platform-card">
+                        <span>APPLE MUSIC</span>
+                    </a>
+                    <a href="https://www.deezer.com/es/album/869204462" target="_blank" class="platform-card">
+                        <span>DEEZER</span>
+                    </a>
+                    <a href="https://tidal.com/album/479131760" target="_blank" class="platform-card">
+                        <span>TIDAL</span>
+                    </a>
+                    <a href="https://open.spotify.com/intl-es/artist/0WxnpteHpV5oeP0CjcKIvo" target="_blank"
+                        class="platform-card">
+                        <span>SPOTIFY</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="tour" class="tour-section">
+            <div class="section-header">
+                <h2 class="section-title">FECHAS 2026</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="tour-dates">
+                <!-- Evento ENDÉMIKA Cali -->
+                <div class="date-row highlighted">
+                    <div class="date-info">
+                        <span class="day">27</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="location">
+                        <span class="city">CALI, CO</span>
+                        <span class="venue">WARHOL BAR (Cl. 5 #26-53)</span>
+                        <span class="extra-info">ENDÉMIKA • 8PM • COVER 13K</span>
+                    </div>
+                    <div class="status">
+                        <span class="badge available">INFO / ENTRADAS</span>
+                    </div>
+                    <div class="action">
+                        <a href="https://wa.me/573207291280" target="_blank" class="btn btn-primary">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="merch" class="merch-teaser">
+            <div class="merch-content">
+                <h2 class="section-title">MALEZA MERCH</h2>
+                <p class="merch-status">PRÓXIMAMENTE</p>
+                <p>La colección oficial estará disponible muy pronto.</p>
+                <a href="#" class="btn btn-outline disabled">TIENDA OFICIAL</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">MALEZA</div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/maleza.rap?igsh=MWI1cW4zZ3M5OWdtbQ%3D%3D&utm_source=qr"
+                target="_blank">INSTAGRAM</a>
+
+            <a href="https://open.spotify.com/intl-es/artist/0WxnpteHpV5oeP0CjcKIvo" target="_blank">SPOTIFY</a>
+            <a href="https://music.apple.com/au/album/mugre-bajo-las-u%C3%B1as-single/1858175195" target="_blank">APPLE
+                MUSIC</a>
+            <a href="https://www.deezer.com/es/album/869204462" target="_blank">DEEZER</a>
+            <a href="https://tidal.com/album/479131760" target="_blank">TIDAL</a>
+        </div>
+        <p class="copyright">© 2026 MALEZA. TODOS LOS DERECHOS RESERVADOS.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
