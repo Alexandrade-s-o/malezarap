@@ -233,24 +233,24 @@ a {
 
 .flower-4 {
     --rot: 15deg;
-    top: -5%;
-    right: -5vw;
-    width: 35vw;
-    max-width: 500px;
-    opacity: 0.5;
+    top: -2%;
+    right: -3vw;
+    width: 18vw;
+    max-width: 260px;
+    opacity: 0.55;
     transform: rotate(var(--rot));
-    filter: brightness(1.1) drop-shadow(0 0 30px rgba(217, 119, 6, 0.2));
+    filter: brightness(1.1) drop-shadow(0 0 20px rgba(217, 119, 6, 0.2));
 }
 
 .flower-5 {
     --rot: -35deg;
-    bottom: -10%;
-    left: -8vw;
-    width: 40vw;
-    max-width: 550px;
+    bottom: -5%;
+    left: -5vw;
+    width: 20vw;
+    max-width: 280px;
     opacity: 0.45;
     transform: rotate(var(--rot)) scaleX(-1);
-    filter: brightness(1.1) drop-shadow(0 0 30px rgba(217, 119, 6, 0.2));
+    filter: brightness(1.1) drop-shadow(0 0 20px rgba(217, 119, 6, 0.2));
 }
 
 @keyframes floatingFlower {
@@ -747,16 +747,16 @@ a {
     }
 
     .flower-4 {
-        width: 55vw;
-        right: -10vw;
-        top: -5%;
-        opacity: 0.5;
+        width: 38vw;
+        right: -5vw;
+        top: -3%;
+        opacity: 0.55;
     }
 
     .flower-5 {
-        width: 60vw;
-        left: -12vw;
-        bottom: -8%;
+        width: 40vw;
+        left: -8vw;
+        bottom: -3%;
         opacity: 0.45;
     }
 
