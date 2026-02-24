@@ -703,10 +703,13 @@ a {
 
     /* Ajuste de flores para móvil */
     .flower-1 {
-        width: 75vw;
-        top: -10%;
-        left: -15%;
-        opacity: 0.8;
+        width: 80vw;
+        top: -12%;
+        left: -35%;
+        /* La movemos más a la izquierda */
+        opacity: 0.7;
+        transform: rotate(var(--rot)) scaleX(-1);
+        /* La invertimos */
         filter: brightness(1.2) drop-shadow(0 0 30px rgba(217, 119, 6, 0.4));
     }
 
