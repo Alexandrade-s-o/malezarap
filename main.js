@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollOffset = window.pageYOffset;
 
-        // Restore Hero Background Parallax (Scroll Only)
+        // Restore Hero Background Parallax (Disabled per request)
         if (parallaxBg) {
-            parallaxBg.style.transform = `translateY(${scrollOffset * 0.4}px)`;
+            parallaxBg.style.transform = `none`;
         }
 
         // Restore Flower Parallax (Use CSS Variable for organic combo)
