@@ -231,6 +231,28 @@ a {
     animation: floatingFlower 30s infinite alternate ease-in-out;
 }
 
+.flower-4 {
+    --rot: 25deg;
+    top: 5%;
+    right: -10vw;
+    width: 30vw;
+    max-width: 400px;
+    opacity: 0.15;
+    /* Muy sutil */
+    transform: rotate(var(--rot));
+}
+
+.flower-5 {
+    --rot: -45deg;
+    bottom: -15%;
+    left: -12vw;
+    width: 35vw;
+    max-width: 450px;
+    opacity: 0.1;
+    /* Aún más sutil de fondo */
+    transform: rotate(var(--rot)) scaleX(-1);
+}
+
 @keyframes floatingFlower {
     0% {
         transform: rotate(-15deg) translate(0, 0);
@@ -722,6 +744,20 @@ a {
 
     .flower-3 {
         display: none;
+    }
+
+    .flower-4 {
+        width: 40vw;
+        right: -15vw;
+        top: 2%;
+        opacity: 0.1;
+    }
+
+    .flower-5 {
+        width: 45vw;
+        left: -15vw;
+        bottom: -5%;
+        opacity: 0.08;
     }
 
 }
