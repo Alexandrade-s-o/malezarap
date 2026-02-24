@@ -703,15 +703,18 @@ a {
 
     /* Ajuste de flores para móvil */
     .flower-1 {
-        width: 50vw;
-        top: -5%;
-        left: -20%;
+        width: 75vw;
+        top: -10%;
+        left: -15%;
+        opacity: 0.8;
+        filter: brightness(1.2) drop-shadow(0 0 30px rgba(217, 119, 6, 0.4));
     }
 
     .flower-2 {
-        width: 65vw;
-        bottom: -5%;
+        width: 80vw;
+        bottom: -8%;
         right: -25%;
+        opacity: 0.7;
     }
 
     .flower-3 {
