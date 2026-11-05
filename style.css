@@ -1014,3 +1014,47 @@ a {
 @media (max-width: 600px) {
     .welcome-flower-right { top: .5rem; right: .5rem; opacity: .9; }
 }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar { padding: .65rem 0; }
+    .nav-container { padding: 0 1rem; gap: .75rem; }
+    .nav-logo { font-size: 1.35rem; flex-shrink: 0; }
+    .nav-links { display: flex; gap: clamp(.65rem, 3vw, 1.5rem); }
+    .nav-links li a { font-size: .65rem; letter-spacing: .12em; }
+    .hero { min-height: 560px; height: 100svh; padding: 5rem 1rem 6rem; }
+    .hero-content { width: 100%; padding: 0; }
+    .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+    .hero-cta .btn { min-width: 170px; padding: 1rem 1.25rem; }
+    .music-section, .tour-section, .merch-teaser { padding: 5rem 1.25rem; }
+    .section-header { margin-bottom: 2.5rem; }
+    .section-title { font-size: clamp(1.8rem, 8vw, 2.2rem); letter-spacing: .12em; }
+    .player-container { padding: 1rem; min-width: 0; }
+    .spotify-embed-wrap { min-width: 0; }
+    .date-row { grid-template-columns: 65px minmax(0, 1fr); padding: 1.5rem 1rem; gap: 1rem; }
+    .date-row .status, .date-row .action { grid-column: 2; }
+    .date-row .action .btn { padding: .9rem 1.25rem; }
+    .location .venue, .extra-info { overflow-wrap: anywhere; }
+    .social-links { flex-wrap: wrap; gap: 1rem 1.5rem; }
+    .footer { padding: 3rem 1.25rem; }
+    .welcome { padding: max(1.5rem, env(safe-area-inset-top)) 1.25rem max(1.5rem, env(safe-area-inset-bottom)); }
+    .welcome-content { max-width: 420px; }
+    .welcome-logo { width: min(72vw, 330px); }
+    .welcome-kicker { font-size: .65rem; letter-spacing: .14em; }
+    .welcome .streaming-platforms { margin: 2rem auto; }
+    .welcome .platform-card { min-height: 50px; }
+    .welcome-enter { min-height: 48px; }
+}
+@media (max-width: 360px) {
+    .nav-links { gap: .55rem; }
+    .nav-links li a { font-size: .58rem; letter-spacing: .07em; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-cta .btn { width: min(100%, 250px); }
+    .welcome .platform-card span { letter-spacing: .06em; }
+}
+@media (max-height: 560px) {
+    .welcome { place-items: start center; }
+    .welcome-logo { width: min(55vw, 280px); }
+    .welcome-kicker { margin-top: .5rem; }
+    .welcome .streaming-platforms { margin: 1rem auto; }
+}
