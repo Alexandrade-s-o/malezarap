@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const welcome = document.getElementById('welcome');
+    const enterSite = document.getElementById('enter-site');
+    if (welcome && enterSite) {
+        document.body.style.overflow = 'hidden';
+        enterSite.addEventListener('click', () => {
+            welcome.hidden = true;
+            document.body.style.overflow = '';
+            document.querySelector('.nav-logo').focus();
+        });
+    }
+
     // --- Particle System (Floating Pollen) ---
     const particleContainer = document.getElementById('particle-container');
     const particleCount = 40;
