@@ -1116,3 +1116,7 @@ a {
     text-align: center;
 }
 .welcome .platform-card span { letter-spacing: .08em; }
+
+.welcome .platform-card { flex-direction: column; gap: .4rem; }
+.welcome .platform-card svg { width: 30px; height: 30px; flex: none; position: relative; z-index: 2; }
+.welcome .platform-card span { font-size: .58rem; }
