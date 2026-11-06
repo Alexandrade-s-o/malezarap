@@ -1093,3 +1093,14 @@ a {
 
 .welcome .platform-card:nth-child(5) { animation-delay: 1.08s; }
 .welcome .platform-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Enlaces de la bienvenida en una sola columna */
+.welcome .platform-grid { grid-template-columns: minmax(0, 1fr); max-width: 340px; gap: .45rem; }
+.welcome .platform-card { min-height: 44px; padding: .65rem 1rem; }
+.welcome .streaming-platforms { margin: 1.5rem auto; }
+@media (max-height: 700px) {
+    .welcome { align-items: flex-start; }
+    .welcome-logo { width: min(55vw, 280px); }
+    .welcome-kicker { margin-top: .5rem; }
+    .welcome .streaming-platforms { margin: 1rem auto; }
+}
