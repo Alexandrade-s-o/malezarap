@@ -944,7 +944,7 @@ a {
 .welcome-kicker { margin-top: 1.5rem; font-size: .7rem; letter-spacing: .22em; color: #e4e8d8; }
 .welcome .streaming-platforms { margin: 2.5rem auto; }
 .welcome .platforms-label { color: #fff; margin-bottom: 1rem; }
-.welcome .platform-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+.welcome .platform-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
 .welcome .platform-card { padding: 1rem .5rem; background: rgba(0, 0, 0, .55); }
 .welcome .platform-card span { font-size: .65rem; letter-spacing: .12em; }
 .welcome-enter { cursor: pointer; }
@@ -1090,3 +1090,6 @@ a {
 @media (max-width: 600px) and (max-height: 560px) {
     .welcome { align-items: flex-start; }
 }
+
+.welcome .platform-card:nth-child(5) { animation-delay: 1.08s; }
+.welcome .platform-card:nth-child(6) { animation-delay: 1.2s; }
