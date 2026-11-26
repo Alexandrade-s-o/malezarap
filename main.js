@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Reveal elements on scroll ---
-    const revealElements = document.querySelectorAll('.date-row, .section-header, .player-container, .merch-content');
+    const revealElements = document.querySelectorAll('.date-row, .section-header, .player-container, .merch-product');
 
     const revealOnScroll = () => {
         revealElements.forEach(el => {

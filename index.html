@@ -143,16 +143,91 @@
             </div>
         </section>
 
-        <section id="merch" class="merch-teaser">
+        <section id="merch" class="merch-section">
             <div class="floral-decorations">
                 <img src="MALEZA_TAGETE.png" class="flower flower-8 flower-organic" alt="">
             </div>
-            <div class="merch-content">
+            <div class="section-header">
                 <h2 class="section-title">MALEZA MERCH</h2>
-                <p class="merch-status">PRÓXIMAMENTE</p>
-                <p>La colección oficial estará disponible muy pronto.</p>
-                <a href="#" class="btn btn-outline disabled">TIENDA OFICIAL</a>
+                <div class="title-line"></div>
             </div>
+
+            <article class="merch-product" aria-labelledby="merch-cd-title">
+                <div class="merch-head">
+                    <span class="merch-tag">EDICIÓN FÍSICA</span>
+                    <h3 class="merch-name" id="merch-cd-title">Mugre bajo las uñas</h3>
+                    <p class="merch-format">CD · MALEZA</p>
+                </div>
+
+                <!-- Catálogo de fotos: para agregar otra, copia un <figure> y cambia la imagen y la etiqueta -->
+                <div class="merch-catalog">
+                    <figure class="merch-item">
+                        <div class="merch-float">
+                            <div class="merch-photo">
+                                <img src="merch/cd-mugre-portada.jpg"
+                                    srcset="merch/cd-mugre-portada-400.jpg 400w, merch/cd-mugre-portada.jpg 800w"
+                                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 250px, 290px"
+                                    alt="CD de Mugre bajo las uñas en su caja transparente"
+                                    width="800" height="800" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <figcaption><span>01</span>PORTADA</figcaption>
+                    </figure>
+                    <figure class="merch-item">
+                        <div class="merch-float">
+                            <div class="merch-photo">
+                                <img src="merch/cd-mugre-interior.jpg"
+                                    srcset="merch/cd-mugre-interior-400.jpg 400w, merch/cd-mugre-interior.jpg 800w"
+                                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 250px, 290px"
+                                    alt="CD abierto: inserto con código QR y disco con arte impreso"
+                                    width="800" height="800" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <figcaption><span>02</span>INTERIOR</figcaption>
+                    </figure>
+                    <figure class="merch-item">
+                        <div class="merch-float">
+                            <div class="merch-photo">
+                                <img src="merch/cd-mugre-mano.jpg"
+                                    srcset="merch/cd-mugre-mano-400.jpg 400w, merch/cd-mugre-mano.jpg 800w"
+                                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 250px, 290px"
+                                    alt="Mano sosteniendo el CD de Mugre bajo las uñas"
+                                    width="800" height="800" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <figcaption><span>03</span>DETALLE</figcaption>
+                    </figure>
+                    <figure class="merch-item">
+                        <div class="merch-float">
+                            <div class="merch-photo">
+                                <img src="merch/cd-mugre-coleccion.jpg"
+                                    srcset="merch/cd-mugre-coleccion-400.jpg 400w, merch/cd-mugre-coleccion.jpg 800w"
+                                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 250px, 290px"
+                                    alt="Varias copias del CD de Mugre bajo las uñas"
+                                    width="800" height="800" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <figcaption><span>04</span>EDICIÓN</figcaption>
+                    </figure>
+                </div>
+
+                <div class="merch-body">
+                    <p class="merch-desc">La edición física de «Mugre bajo las uñas», para tenerla en tus manos.</p>
+                    <ul class="merch-includes">
+                        <li>Caja transparente</li>
+                        <li>Portada impresa</li>
+                        <li>Disco con arte impreso</li>
+                        <li>Inserto con código QR</li>
+                    </ul>
+                    <!-- Precio: quitar el comentario y poner el valor -->
+                    <!-- <p class="merch-price">$00.000 COP</p> -->
+                    <a href="https://ig.me/m/maleza.rap" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary merch-buy">PEDIR POR INSTAGRAM</a>
+                    <p class="merch-note">Escríbenos por mensaje directo para pedir el tuyo.</p>
+                </div>
+            </article>
+
+            <p class="merch-more">Más merch muy pronto</p>
         </section>
     </main>
 
